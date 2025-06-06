@@ -11,7 +11,6 @@
   <body>
     <h1>Temperature converter</h1>
     <form id="converter">
-      <script src="converter.js"></script>
       <label for="input-temp">temperature</label>
       <input type="text" id="input-temp" name="input-temp" value="20" />
       <label for="input-unit">from</label>
@@ -28,10 +27,12 @@
       </select>
       <output name="output-temp" id="output-temp" for="input-temp input-unit output-unit">68 F</output>
     </form>
-  </body>
-  <script>
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js', { scope: '/' });
-    }
+
+    <script src="converter.js"></script>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' });
+      }
     </script>
+  </body>
 </html>
